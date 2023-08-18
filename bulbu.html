@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cen{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <h1 Bulb control</h1>
+       <button onclick="onbulb()" id="bnt1">On</button>
+       <button onclick="ofbulb()" id="bnt2">OFF</button> 
+       <button onclick="onoff()">Auto</button> 
+        <img id="1" src="off.jpg" alt="off" class="cen">
+
+
+
+
+        
+       <script>
+        const onbulb=()=>{
+            let v=document.getElementById("1")
+            let n=v.setAttribute("src","on.jpg")
+        }
+        
+        const ofbulb=()=>{
+            let v=document.getElementById("1");
+            let n=v.setAttribute("src","off.jpg")
+        }
+        const onoff=()=>{
+            let v=document.getElementById("1");
+            let srcval=v.getAttribute("src")
+            if(srcval=="off.jpg"){
+           onbulb();
+            }
+            else
+            {
+            ofbulb();
+            }
+        }
+       </script>
+</body>
+</html>
